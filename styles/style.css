@@ -12,7 +12,7 @@
   font-optical-sizing: auto;
   font-style: normal;
   font-variation-settings:
-    "wdth" 100;
+    "width" 100;
 }
 
 
@@ -210,6 +210,118 @@ body {
     height: 100px;
     transform: translate(10%, -40%);
 }
+
+
+.latest-deals {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 5px;
+}
+
+.latest-deals h1 {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.latest-deals p {
+  font-size: 16px;
+  color: #777;
+  margin-top: 5px;
+}
+
+.deal-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.deal-item-left, .deal-item-right {
+  position: relative;
+}
+
+.deal-item-left img {
+  width: 60%;
+  height: 90%;
+  object-fit: cover;
+  margin: 0 auto;
+  padding: 0 20px 0 0;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.deal-item-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.deal-item-right img {
+  width: 60%;
+  height: 90%;
+  border-radius: 10px;
+}
+
+.deal-text-right {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  width: 50%;
+}
+
+.deal-text-left-a {
+  position: absolute;
+  bottom: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  width: 50%;
+}
+
+.deal-text-left-b {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  width: 50%;
+}
+
+.deal-text h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.deal-text a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #ff6f61;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.deal-text a:hover {
+  color: #fff;
+}
+
 @media screen and (min-width: 431px) and (max-width: 990px) {
     .navbar {
         display: flex; 
@@ -254,6 +366,9 @@ body {
      grid-template-columns: repeat(4, 1fr);
     }
 
+    .deal-container {
+        grid-template-columns: repeat(2, 1fr); 
+    }
 }
 
 /* for iphone 14 pro */
@@ -362,7 +477,55 @@ width: 100%;
         max-width: 90%;
         padding: 0;
     }
+    .deal-container {
+        grid-template-columns: 1fr; 
+        width: 100%;
+    }
+    .deal-item-right,.deal-item-left, 
+    { justify-content: center;
+        width 100%
+        height: 100%;
+        margin: 0 auto;
+    }
 
+ .deal-item-left img
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+max-width: 100%;
+  }
+
+   .deal-item-right img{
+    align-items: center;
+    margin-left: 80px;
+    max-width: 100%;
+
+   }
+ .deal-text-left-a{
+    justify-content: center;
+    width 10%
+    height: 5%;
+    bottom: -20%;
+    padding: 0;
+    margin: 0 0;
+    transform: translate(-55%, -80%);
+ }
+ .deal-text-left-b{
+justify-content: center;
+    width 10%
+    height: 5%;
+    bottom: 70%;
+    padding: 0;
+    margin: 0 0;
+    transform: translate(-50%, 40%);
+}
+
+.deal-text-right{
+transform: translate(-15%, -40%);
 
 }
+}
+
+
 
